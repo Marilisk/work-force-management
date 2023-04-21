@@ -1,0 +1,56 @@
+@use './../../../vars.scss' as *;
+
+.wrap {
+    border: 1px solid $gray-border;
+    height: 100%;
+    background: white;
+}
+
+.bookMarks {
+    display: flex;
+    color: $gray-text;
+    margin-top: 8px;
+    margin-left: 8px;
+    font-weight: lighter;
+
+    .mark, .activeMark {
+        border-bottom: 1px solid white;
+        border-radius: 4px 4px 0 0;
+        padding: 7px;
+        width: 70px;
+        text-align: center;
+        cursor: pointer;
+        transition: 100ms linear;
+        cursor: pointer;
+
+
+    }
+
+
+
+    .activeMark {
+        color: $black-text;
+        font-weight: bold;
+        border: 1px solid $gray-border;
+        position: relative;
+        &::after {
+            content: '';
+            width: 68px;
+            height: 3px;
+            //border: 1px solid orangered;
+            background: white;
+            position: absolute;
+            top: 30px;
+            left: 0px;
+        }
+        //border-bottom: 2px solid white;
+        //border-width: 1px 1px 0 1px;
+
+    }
+}
+
+.calendarWrap {
+    border-top: 1px solid $gray-border;
+    //padding-top: 10px;
+}
+

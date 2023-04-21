@@ -1,0 +1,13 @@
+@use './../../vars.scss' as *;
+
+
+.wrap {
+    h1 {
+        color: $gray-text;
+        font-weight: 100;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    height: 100%;
+    
+}

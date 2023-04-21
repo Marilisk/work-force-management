@@ -1,0 +1,104 @@
+@use './../../../../vars.scss' as *;
+
+.wrap {
+    margin: 10px;
+    color: $gray-text;
+    font-size: 16px;
+    overflow-x: hidden;
+    
+}
+
+.lineWrap {
+    display: flex;
+    border: 1px solid $gray-border;
+    border-top: none;
+    background: white;
+    z-index: 1;
+
+    &:first-child {
+        border-top: 1px solid $gray-border;
+    }
+    & > div {
+        border-right: 1px solid $gray-border;
+        padding: 9px;
+    }
+    .ruler {
+        flex: 1;
+        padding: 0;
+        //border: 1px solid blue;
+        border-right: none;
+        display: grid;
+        grid-template-columns: repeat(24, 80px);
+        //overflow-x: hidden;
+        position: relative;
+        left: -561px;
+        background: transparent;
+        //z-index: -1;
+    }
+}
+.dayOfWeek {
+    width: 112px;
+    min-width: 112px;
+    z-index: 1;
+    background: inherit;
+
+
+}
+.date {
+    width: 96px;
+    min-width: 96px;
+    z-index: 1;
+    background: inherit;
+}
+
+.rulerCeil, .calendarCeil {
+    padding: 9px 0;
+    width: 80px;
+    p {
+        font-size: 12px;
+        padding-left: 6px;
+        padding-top: 6px;
+    }
+
+}
+
+.rulerCeil {
+    border-right: 1px solid $gray-border;
+    padding: 0;
+    .rulerItem {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        & > div {
+            margin-top: 6px;
+            height: 12px;
+            border-right: 1px solid $gray-border;
+            &:last-child {
+                border-right: none;
+            }
+            &:not(:nth-child(3n)) {
+                height: 6px;
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+.calendarCeil {
+    //border: 1px solid blue;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 5px 0;
+
+}
+
+.fiveMin, .green {
+    //border: 1px solid orangered;
+    //width: 10%;
+    font-size: 4px;
+}
+
+.green {
+    background: #54df52;
+    border: 1px solid #54df52;
+}
+
