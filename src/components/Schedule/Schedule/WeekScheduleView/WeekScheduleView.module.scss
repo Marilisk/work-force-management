@@ -1,11 +1,14 @@
-@use './../../../../vars.scss' as *;
+@use './../../../../styles/vars.scss' as *;
 
 .wrap {
     margin: 10px;
     color: $gray-text;
     font-size: 16px;
     overflow-x: hidden;
-    
+    //border: 1px solid orange;
+    user-select: none;
+    max-width: 1248px;
+
 }
 
 .lineWrap {
@@ -15,6 +18,7 @@
     background: white;
     z-index: 1;
 
+
     &:first-child {
         border-top: 1px solid $gray-border;
     }
@@ -23,26 +27,24 @@
         padding: 9px;
     }
     .ruler {
+        cursor: grab;
         flex: 1;
         padding: 0;
-        //border: 1px solid blue;
         border-right: none;
         display: grid;
         grid-template-columns: repeat(24, 80px);
-        //overflow-x: hidden;
+        width: 1920px;
+        max-width: 1920px;
         position: relative;
-        left: -561px;
         background: transparent;
-        //z-index: -1;
     }
 }
+
 .dayOfWeek {
     width: 112px;
     min-width: 112px;
     z-index: 1;
     background: inherit;
-
-
 }
 .date {
     width: 96px;

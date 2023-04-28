@@ -1,51 +1,67 @@
+@use './../../styles/vars.scss' as *;
+
 .navBar {
-  min-width: 250px;
-  background: #1F222B;
+  min-width: 240px;
+  width: 12vw;
+  background: $black-background;
   color: white;
   min-height: 100vh;
+
 
   h1,
   h2 {
     color: unset;
   }
 
-  h2 {
-    font-weight: 200;
-    font-family: 'DisplaySerifRegular';
 
-  }
-
-  font-family: 'DisplaySerifRegular';
   letter-spacing: .05em;
   letter-spacing: .2px;
-  font-weight: 100;
+
+}
+.logowrap {
+  display: flex;
+  
+  padding: 22px 0;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid #686E7B;
+  margin-bottom: 20px;
+
 
 }
 
 .logo {
   background: url('./../../assets/images/logo/Tele2-logo.svg');
-  height: 30px;
-  width: 80px;
-  margin: 20px;
+  background: url('./../../assets/images/logo/NPECloud-logo.png');
+  height: 36px;
+  width: 160px;
   background-repeat: no-repeat;
-  //background-position: center;
+  background-position: center center;
   background-size: contain;
-
-
+  //border: 1px solid white;
+}
+.burger {
+  //border: 1px solid yellow;
+  padding-top: 4px;
+  svg {
+    fill: white;
+    height: 24px;
+    width: 24px;
+  }
 }
 
 .activeItem,
 .item {
   &>div {
-    //border: 1px solid yellow;
     padding: 7px 0;
+    color: #686E7B;
 
     svg {
-      //fill: white;
       display: inline-block;
       margin: auto 10px;
-      //height: 20px;
-      //width: 20px;
+      height: 20px;
+      width: 20px;
+      fill: #686E7B;
     }
 
     span {
@@ -63,11 +79,16 @@
 .activeItem {
 
   &>div {
-    background: #363940;
+    font-weight: 600;
+    color: white;
+
+    svg {
+      fill: white;
+    }
 
     &>div {
       border-left: 4px solid white;
-      
+
     }
   }
 }

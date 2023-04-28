@@ -3,11 +3,21 @@ import BellIcon from '../../assets/icons/BellIcon';
 import c from './NavBar.module.scss'
 import { NavLink } from 'react-router-dom';
 import ScheduleIcon from '../../assets/icons/ScheduleIcon';
+import SheetIcon from '../../assets/icons/SheetIcon';
+import BurgerMenuIcon from '../../assets/icons/BurgerMenuIcon';
 
 
 const NavBar = () => {
+    
     return <div className={c.navBar}>
-        <div className={c.logo} />
+
+        <div className={c.logowrap}>
+            <div className={c.logo} />
+
+            <div className={c.burger}>
+                <BurgerMenuIcon />
+            </div>
+        </div>
 
         <div className={c.user}>
 
@@ -44,6 +54,18 @@ const NavBar = () => {
                     <ScheduleIcon />
                     <span>
                         Расписание работы
+                    </span>
+                </div>
+            </div>
+        </NavLink>
+
+        <NavLink to={'/timesheet'} className={({ isActive }) =>
+            isActive ? c.activeItem : c.item}>
+            <div>
+                <div>
+                    <SheetIcon />
+                    <span>
+                        Табель
                     </span>
                 </div>
             </div>

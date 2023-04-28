@@ -1,6 +1,6 @@
 @use './vars.scss' as *;
 
-@font-face {
+/* @font-face {
   font-family: 'DisplaySerif';
   src: local('DisplaySerif'),
   url('./fonts/tele2/Tele2DisplaySerif-Bold-short__W.ttf') format('truetype');
@@ -19,16 +19,16 @@
   url('./fonts/tele2/Tele2DisplaySerif-Regular-short__W.ttf') format('truetype');
   font-weight: normal;
 	font-style: normal;
-}
+} */
 
 * {
   box-sizing: border-box;
   max-width: 100vw;
-  margin: 0; 
+  margin: 0;
   padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
-
 
 a {
   text-decoration: none;
@@ -38,13 +38,16 @@ a {
 body {
   min-width: 320px;
   min-height: 100vh;
-  overflow-x: hidden;
-  font-family: 'TextSans';
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'DisplaySerif';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $black-text;
 }
 
@@ -55,13 +58,13 @@ button {
   display: inline-block;
   transition: 100ms linear;
 }
+
 button {
   cursor: pointer;
   background: white;
   border: none;
 }
+
 ul {
   list-style: none;
 }
-
-

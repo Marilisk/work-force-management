@@ -1,4 +1,4 @@
-@use './../../../vars.scss' as *;
+@use './../../../styles/vars.scss' as *;
 
 .wrap {
     border: 1px solid $gray-border;
@@ -20,13 +20,12 @@
         width: 70px;
         text-align: center;
         cursor: pointer;
-        transition: 100ms linear;
+        transition: font-weight 100ms linear;
         cursor: pointer;
-
-
+        &:hover {
+            font-weight: bold;
+        }
     }
-
-
 
     .activeMark {
         color: $black-text;
@@ -37,15 +36,11 @@
             content: '';
             width: 68px;
             height: 3px;
-            //border: 1px solid orangered;
             background: white;
             position: absolute;
             top: 30px;
             left: 0px;
         }
-        //border-bottom: 2px solid white;
-        //border-width: 1px 1px 0 1px;
-
     }
 }
 
